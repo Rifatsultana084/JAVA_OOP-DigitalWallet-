@@ -1,13 +1,13 @@
-public class SendMoney extends Payment {
-    private int receiverAccount;
+public class SendMoney extends Payment {   //subclass of Payment class
+    private int receiverAccount;//private access instance variable
 
-    public SendMoney(double amount, int receiverAccount) {
-        super(amount);
+    public SendMoney(double amount, int receiverAccount) {//send money Constructor
+        super(amount);// super class of parent class a inheritance
         this.receiverAccount = receiverAccount;
     }
 
     @Override
-    public void processPayment() {
+    public void processPayment() { //Abstract method implementation
         if (amount <= getBalance()) {
             setBalance(getBalance() - amount);
             System.out.println(amount + " sent successfully to account " + receiverAccount);
