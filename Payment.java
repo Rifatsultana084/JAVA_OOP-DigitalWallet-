@@ -2,7 +2,7 @@ public abstract class Payment {
     private static double accountBalance ; // Static variable account balance
     protected double amount; // instance variable transaction amount
 
-    public Payment(double amount) {
+    public Payment(double amount) {//Constructor
         this.amount = amount;
     }
 
