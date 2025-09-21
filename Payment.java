@@ -1,20 +1,20 @@
 public abstract class Payment {
-    private static double accountBalance ; // initial balance
-    protected double amount; // transaction amount
+    private static double accountBalance ; // Static variable account balance
+    protected double amount; // instance variable transaction amount
 
     public Payment(double amount) {
         this.amount = amount;
     }
 
-    // Shared balance methods
+    // Balance ar Getter Method
     public static double getBalance() {
         return accountBalance;
     }
-
+//Balance Setter method
     public static void setBalance(double balance) {
         Payment.accountBalance = balance;
     }
 
-    // Each subclass must implement its own payment logic
+    // Abstract Method-Each subclass must implement its own payment logic
     public abstract void processPayment();
 }
